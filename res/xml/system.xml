@@ -31,8 +31,21 @@
          android:title="@string/global_actions_title"
          android:summary="@string/global_actions_summary"
          android:fragment="com.nezuko.extra.fragments.GlobalActionsSettings" />
+    </PreferenceCategory>
 
-		<!-- Themes -->
+    <PreferenceCategory
+         android:key="ui"
+         android:title="@string/UI">
+		
+    <!-- Animations -->
+    <Preference
+        android:key="animations_category"
+        android:title="@string/animation_title"
+        android:summary="@string/animation_summary"
+        android:fragment="com.nezuko.extras.fragments.AnimationSettings"
+        android:icon="@drawable/ic_settings_animations" />
+
+        <!-- Themes -->
         <Preference
             android:key="theme_category"
             android:title="@string/theme_type_title"
