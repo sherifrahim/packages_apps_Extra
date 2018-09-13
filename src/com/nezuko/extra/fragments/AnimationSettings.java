@@ -16,6 +16,7 @@
 
 package com.nezuko.extra.fragments;
 
+import android.app.ActivityThread;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
@@ -27,6 +28,7 @@ import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -48,7 +50,8 @@ import java.util.List;
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class AnimationSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
-
+    
+    private static final String KEY_TOAST_ANIMATION = "toast_animation";
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
@@ -60,6 +63,9 @@ public class AnimationSettings extends SettingsPreferenceFragment implements
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
     private ListPreference mTileAnimationInterpolator;
+    private ListPreference mToastAnimation;
+    
+    protected Context mSysUiContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,7 +73,7 @@ public class AnimationSettings extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.animations);
         final ContentResolver resolver = getActivity().getContentResolver();
-
+        mSysUiContext = ActivityThread.currentActivityThread().getSystemUiContext();
         // QS animation
         mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
         int tileAnimationStyle = Settings.System.getIntForUser(resolver,
@@ -95,6 +101,15 @@ public class AnimationSettings extends SettingsPreferenceFragment implements
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                 SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
         mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+
+        mToastAnimation = (ListPreference) findPreference(KEY_TOAST_ANIMATION);
+        mToastAnimation.setSummary(mToastAnimation.getEntry());
+        int CurrentToastAnimation = Settings.Global.getInt(getContentResolver(), Settings.Global.TOAST_ANIMATION, 1);
+        mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
+        mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
+        mToastAnimation.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -128,6 +143,12 @@ public class AnimationSettings extends SettingsPreferenceFragment implements
             if (newValue != null) {
                 SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) newValue);
             }
+            return true;
+        } else if (preference == mToastAnimation) {
+            int index = mToastAnimation.findIndexOfValue((String) newValue);
+            Settings.Global.putString(getContentResolver(), Settings.Global.TOAST_ANIMATION, (String) newValue);
+            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
+            Toast.makeText(mSysUiContext, "Toast Test", Toast.LENGTH_SHORT).show();
             return true;
         }
         return false;
