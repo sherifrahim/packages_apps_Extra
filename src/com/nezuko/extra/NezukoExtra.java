@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.tweaks;
+package com.nezuko.extra;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -36,14 +36,14 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.dirtyunicorns.tweaks.fragments.Team;
-import com.dirtyunicorns.tweaks.navigation.BottomNavigationViewCustom;
-import com.dirtyunicorns.tweaks.tabs.Lockscreen;
-import com.dirtyunicorns.tweaks.tabs.Hardware;
-import com.dirtyunicorns.tweaks.tabs.Statusbar;
-import com.dirtyunicorns.tweaks.tabs.System;
+import com.nezuko.extra.fragments.Team;
+import com.nezuko.extra.navigation.BottomNavigationViewCustom;
+import com.nezuko.extra.tabs.Lockscreen;
+import com.nezuko.extra.tabs.Hardware;
+import com.nezuko.extra.tabs.Statusbar;
+import com.nezuko.extra.tabs.System;
 
-public class DirtyTweaks extends SettingsPreferenceFragment {
+public class NezukoExtra extends SettingsPreferenceFragment {
 
     private MenuItem mMenuItem;
 
@@ -51,9 +51,9 @@ public class DirtyTweaks extends SettingsPreferenceFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        getActivity().setTitle(R.string.dirtytweaks_title);
+        getActivity().setTitle(R.string.nezukoextra_title);
 
-        View view = inflater.inflate(R.layout.dirtytweaks, container, false);
+        View view = inflater.inflate(R.layout.nezukoextra, container, false);
 
         final BottomNavigationViewCustom navigation = view.findViewById(R.id.navigation);
 
@@ -65,22 +65,22 @@ public class DirtyTweaks extends SettingsPreferenceFragment {
                 new BottomNavigationViewCustom.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.system:
-                        viewPager.setCurrentItem(0);
-                        return true;
-                    case R.id.lockscreen:
-                        viewPager.setCurrentItem(1);
-                        return true;
-                    case R.id.statusbar:
-                        viewPager.setCurrentItem(2);
-                        return true;
-                     case R.id.hardware:
-                        viewPager.setCurrentItem(3);
-                        return true;
-                }
-                return false;
-            }
+			int id = item.getItemId();
+				if (id == R.id.system) {
+					viewPager.setCurrentItem(0);
+					return true;
+				} else if (id == R.id.lockscreen) {
+					viewPager.setCurrentItem(1);
+					return true;
+				} else if (id == R.id.statusbar) {
+					viewPager.setCurrentItem(2);
+					return true;
+				} else if (id == R.id.hardware) {
+					viewPager.setCurrentItem(3);
+					return true;
+				}
+				return false;
+	    }
         });
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -151,7 +151,7 @@ public class DirtyTweaks extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DIRTYTWEAKS;
+        return MetricsProto.MetricsEvent.NEZUKO;
     }
 
     @Override

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.tweaks.tabs;
+package com.raven.lair.tabs;
 
 import android.os.Bundle;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -92,6 +92,6 @@ public class Statusbar extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DIRTYTWEAKS;
+        return MetricsProto.MetricsEvent.CORVUS;
     }
 }

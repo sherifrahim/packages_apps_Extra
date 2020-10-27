@@ -14,33 +14,33 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.tweaks.fragments;
+package com.nezuko.extra.fragments;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
-import android.provider.Settings;
+import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
+import android.provider.Settings;
 import androidx.preference.*;
 
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.search.Indexable;
+import com.android.settingslib.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class ClockOptions extends SettingsPreferenceFragment
+public class CarrierLabel extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.clock_options);
+        addPreferencesFromResource(R.xml.carrier_label);
 
     }
 
@@ -51,7 +51,7 @@ public class ClockOptions extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DIRTYTWEAKS;
+        return MetricsProto.MetricsEvent.NEZUKO;
     }
 
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
@@ -61,7 +61,7 @@ public class ClockOptions extends SettingsPreferenceFragment
                         boolean enabled) {
                     final ArrayList<SearchIndexableResource> result = new ArrayList<>();
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.clock_options;
+                    sir.xmlResId = R.xml.carrier_label;
                     result.add(sir);
                     return result;
                 }

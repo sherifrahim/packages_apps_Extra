@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.tweaks.tabs;
+package com.raven.lair.tabs;
 
 import android.os.Bundle;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -27,31 +27,31 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class System extends SettingsPreferenceFragment
+public class Hardware extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
-    private static final String EXPANDED_DESKTOP_CATEGORY = "expanded_desktop_category";
-    private static final String NOTIFICATIONS_CATEGORY = "notifications_category";
-    private static final String MISC_CATEGORY = "miscellaneous_category";
+    private static final String BUTTONS_CATEGORY = "buttons_category";
+    private static final String NAVIGATION_CATEGORY = "navigation_category";
+    private static final String POWERMENU_CATEGORY = "powermenu_category";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.system);
+        addPreferencesFromResource(R.xml.hardware);
 
-        Preference ExpandedDesktop = findPreference(EXPANDED_DESKTOP_CATEGORY);
-        if (!getResources().getBoolean(R.bool.has_expanded_desktop)) {
-            getPreferenceScreen().removePreference(ExpandedDesktop);
+        Preference Buttons = findPreference(BUTTONS_CATEGORY);
+        if (!getResources().getBoolean(R.bool.has_buttons)) {
+            getPreferenceScreen().removePreference(Buttons);
         }
 
-        Preference Notifications = findPreference(NOTIFICATIONS_CATEGORY);
-        if (!getResources().getBoolean(R.bool.has_notifications)) {
-            getPreferenceScreen().removePreference(Notifications);
+        Preference Navigation = findPreference(NAVIGATION_CATEGORY);
+        if (!getResources().getBoolean(R.bool.has_navigation)) {
+            getPreferenceScreen().removePreference(Navigation);
         }
 
-        Preference MiscOptions = findPreference("miscellaneous_category");
-        if (!getResources().getBoolean(R.bool.has_misc_options)) {
-            getPreferenceScreen().removePreference(MiscOptions);
+        Preference PowerMenu = findPreference(POWERMENU_CATEGORY);
+        if (!getResources().getBoolean(R.bool.has_powermenu)) {
+            getPreferenceScreen().removePreference(PowerMenu);
         }
     }
 
@@ -65,13 +65,15 @@ public class System extends SettingsPreferenceFragment
         super.onPause();
     }
 
+
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();
         return false;
     }
 
+
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DIRTYTWEAKS;
+        return MetricsProto.MetricsEvent.CORVUS;
     }
 }

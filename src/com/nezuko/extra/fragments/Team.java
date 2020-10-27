@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.tweaks.fragments;
+package com.nezuko.extra.fragments;
 
 import androidx.annotation.NonNull;
 import android.app.AlertDialog;
@@ -30,7 +30,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import androidx.fragment.app.DialogFragment;
 
-import com.dirtyunicorns.tweaks.R;
+import com.nezuko.extra.R;
 
 public class Team extends DialogFragment {
 

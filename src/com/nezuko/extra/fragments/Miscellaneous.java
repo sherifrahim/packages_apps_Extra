@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2019 The Dirty Unicorns Project
+ * Copyright (C) 2017-2019 The Dirty Unicorns Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,63 +14,44 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.tweaks.fragments;
+package com.nezuko.extra.fragments;
 
-import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import androidx.preference.*;
-import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.search.Indexable;
+import com.android.settingslib.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
-
-import com.dirtyunicorns.support.preferences.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NavigationOptions extends SettingsPreferenceFragment
+public class Miscellaneous extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.navigation_options);
-
-        final PreferenceScreen prefSet = getPreferenceScreen();
-
+        addPreferencesFromResource(R.xml.miscellaneous);
     }
 
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
         return false;
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DIRTYTWEAKS;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
+        return MetricsProto.MetricsEvent.NEZUKO;
     }
 
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
@@ -80,7 +61,7 @@ public class NavigationOptions extends SettingsPreferenceFragment
                         boolean enabled) {
                     final ArrayList<SearchIndexableResource> result = new ArrayList<>();
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.navigation_options;
+                    sir.xmlResId = R.xml.miscellaneous;
                     result.add(sir);
                     return result;
                 }

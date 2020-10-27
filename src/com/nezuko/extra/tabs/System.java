@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.tweaks.tabs;
+package com.raven.lair.tabs;
 
 import android.os.Bundle;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -23,35 +23,35 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceFragment;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.logging.nano.MetricsProto;
 
-import com.android.internal.util.du.Utils;
-
-public class Lockscreen extends SettingsPreferenceFragment
+public class System extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
-    private static final String FINGERPRINT_PREFS_CATEGORY = "fingerprint_prefs_category";
-    private static final String LOCKSCREEN_ITEMS_CATEGORY = "lockscreen_items_category";
+    private static final String EXPANDED_DESKTOP_CATEGORY = "expanded_desktop_category";
+    private static final String NOTIFICATIONS_CATEGORY = "notifications_category";
+    private static final String MISC_CATEGORY = "miscellaneous_category";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.lockscreen);
+        addPreferencesFromResource(R.xml.system);
 
-        Preference LockscreenItems = findPreference(LOCKSCREEN_ITEMS_CATEGORY);
-        if (!getResources().getBoolean(R.bool.has_lockscreen_items)) {
-            getPreferenceScreen().removePreference(LockscreenItems);
+        Preference ExpandedDesktop = findPreference(EXPANDED_DESKTOP_CATEGORY);
+        if (!getResources().getBoolean(R.bool.has_expanded_desktop)) {
+            getPreferenceScreen().removePreference(ExpandedDesktop);
         }
 
-        Preference FingerprintPrefs = findPreference(FINGERPRINT_PREFS_CATEGORY);
-        if (!getResources().getBoolean(R.bool.has_fingerprint_prefs)) {
-            getPreferenceScreen().removePreference(FingerprintPrefs);
-        } else {
-            if (!Utils.hasFingerprintSupport(getContext())) {
-                getPreferenceScreen().removePreference(FingerprintPrefs);
-            }
+        Preference Notifications = findPreference(NOTIFICATIONS_CATEGORY);
+        if (!getResources().getBoolean(R.bool.has_notifications)) {
+            getPreferenceScreen().removePreference(Notifications);
+        }
+
+        Preference MiscOptions = findPreference("miscellaneous_category");
+        if (!getResources().getBoolean(R.bool.has_misc_options)) {
+            getPreferenceScreen().removePreference(MiscOptions);
         }
     }
 
@@ -65,15 +65,13 @@ public class Lockscreen extends SettingsPreferenceFragment
         super.onPause();
     }
 
-
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();
         return false;
     }
 
-
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DIRTYTWEAKS;
+        return MetricsProto.MetricsEvent.CORVUS;
     }
 }
