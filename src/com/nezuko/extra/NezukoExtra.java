@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017-2019 The Dirty Unicorns Project
+ * Copyright (C) 2015-2020 AOSiP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,12 +16,15 @@
 
 package com.nezuko.extra;
 
-import android.graphics.drawable.ColorDrawable;
+import android.app.ActionBar;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
@@ -36,71 +39,65 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.nezuko.extra.fragments.Team;
-import com.nezuko.extra.navigation.BottomNavigationViewCustom;
-import com.nezuko.extra.tabs.Lockscreen;
+import com.nezuko.extra.fragments.team.TeamActivity;
 import com.nezuko.extra.tabs.Hardware;
+import com.nezuko.extra.tabs.Lockscreen;
 import com.nezuko.extra.tabs.Statusbar;
 import com.nezuko.extra.tabs.System;
 
+import com.nezuko.extra.navigation.BubbleNavigationConstraintView;
+import com.nezuko.extra.navigation.BubbleNavigationChangeListener;
+
 public class NezukoExtra extends SettingsPreferenceFragment {
 
-    private MenuItem mMenuItem;
+    private static final String TAG = "NezukoExtra";
+
+    Context mContext;
+//    View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        getActivity().setTitle(R.string.nezukoextra_title);
-
+        mContext = getActivity();
         View view = inflater.inflate(R.layout.nezukoextra, container, false);
 
-        final BottomNavigationViewCustom navigation = view.findViewById(R.id.navigation);
+        ActionBar actionBar = getActivity().getActionBar();
+        if (actionBar != null) {
+            actionBar.setTitle(R.string.nezukoextra_title);
+        }
 
-        final ViewPager viewPager = view.findViewById(R.id.viewpager);
+        BubbleNavigationConstraintView bubbleNavigationConstraintView =  (BubbleNavigationConstraintView) view.findViewById(R.id.bottom_navigation_view_constraint);
+        ViewPager viewPager = view.findViewById(R.id.viewpager);
         PagerAdapter mPagerAdapter = new PagerAdapter(getFragmentManager());
         viewPager.setAdapter(mPagerAdapter);
 
-        navigation.setOnNavigationItemSelectedListener(
-                new BottomNavigationViewCustom.OnNavigationItemSelectedListener() {
+        bubbleNavigationConstraintView.setNavigationChangeListener(new BubbleNavigationChangeListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-			int id = item.getItemId();
-				if (id == R.id.system) {
-					viewPager.setCurrentItem(0);
-					return true;
-				} else if (id == R.id.lockscreen) {
-					viewPager.setCurrentItem(1);
-					return true;
-				} else if (id == R.id.statusbar) {
-					viewPager.setCurrentItem(2);
-					return true;
-				} else if (id == R.id.hardware) {
-					viewPager.setCurrentItem(3);
-					return true;
-				}
-				return false;
-	    }
+            public void onNavigationChanged(View view, int position) {
+                if (view.getId() == R.id.system) {
+                    viewPager.setCurrentItem(position, true);
+                } else if (view.getId() == R.id.lockscreen) {
+                    viewPager.setCurrentItem(position, true);
+                } else if (view.getId() == R.id.statusbar) {
+                    viewPager.setCurrentItem(position, true);
+                } else if (view.getId() == R.id.hardware) {
+                    viewPager.setCurrentItem(position, true);
+		}
+            }
         });
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset,
-                                       int positionOffsetPixels) {
+            public void onPageScrolled(int i, float v, int i1) {
             }
 
             @Override
-            public void onPageSelected(int position) {
-                if(mMenuItem != null) {
-                    mMenuItem.setChecked(false);
-                } else {
-                    navigation.getMenu().getItem(0).setChecked(false);
-                }
-                navigation.getMenu().getItem(position).setChecked(true);
-                mMenuItem = navigation.getMenu().getItem(position);
+            public void onPageSelected(int i) {
+                bubbleNavigationConstraintView.setCurrentActiveItem(i);
             }
 
             @Override
-            public void onPageScrollStateChanged(int state) {
+            public void onPageScrollStateChanged(int i) {
             }
         });
 
@@ -141,13 +138,13 @@ public class NezukoExtra extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                getString(R.string.bottom_nav_system_title),
-                getString(R.string.bottom_nav_lockscreen_title),
-                getString(R.string.bottom_nav_statusbar_title),
-                getString(R.string.bottom_nav_hardware_title)};
+            getString(R.string.navigation_system_title),
+            getString(R.string.navigation_lockscreen_title),
+            getString(R.string.navigation_statusbar_title),
+            getString(R.string.navigation_hardware_title)};
 
-        return titleString;
-    }
+	    return titleString;
+	}
 
     @Override
     public int getMetricsCategory() {
@@ -156,19 +153,17 @@ public class NezukoExtra extends SettingsPreferenceFragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        menu.add(0, 0, 0, R.string.dialog_team_title);
+		menu.add(0, 0, 0, R.string.dialog_team_title);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case 0:
-                final Team dialog = new Team();
-                showDialog(this, dialog);
-                return true;
-            default:
-                return false;
-        }
+	    if (item.getItemId() == 0) {
+		    Intent intent = new Intent(mContext, TeamActivity.class);
+		    mContext.startActivity(intent);
+		    return true;
+	    }
+	    return false;
     }
 
     private static void showDialog(Fragment context, DialogFragment dialog) {
