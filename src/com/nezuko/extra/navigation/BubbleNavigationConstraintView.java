@@ -1,4 +1,4 @@
-package com.raven.lair.navigation;
+package com.nezuko.extra.navigation;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -15,7 +15,7 @@ import android.view.View;
 
 import com.android.settings.R;
 
-import com.raven.lair.navigation.BubbleNavigationChangeListener;
+import com.nezuko.extra.navigation.BubbleNavigationChangeListener;
 
 import java.util.ArrayList;
 

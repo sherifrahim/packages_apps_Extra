@@ -27,13 +27,12 @@ import android.view.MenuItem;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;;
+import androidx.viewpager.widget.ViewPager;
+
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -86,6 +85,7 @@ public class NezukoExtra extends SettingsPreferenceFragment {
 		}
             }
         });
+
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int i, float v, int i1) {
@@ -164,15 +164,5 @@ public class NezukoExtra extends SettingsPreferenceFragment {
 		    return true;
 	    }
 	    return false;
-    }
-
-    private static void showDialog(Fragment context, DialogFragment dialog) {
-        FragmentTransaction ft = context.getChildFragmentManager().beginTransaction();
-        Fragment prev = context.getChildFragmentManager().findFragmentByTag("dialog");
-        if (prev != null) {
-            ft.remove(prev);
-        }
-        ft.addToBackStack(null);
-        dialog.show(ft, "dialog");
     }
 }

@@ -1,7 +1,7 @@
-package com.raven.lair.navigation;
+package com.nezuko.extra.navigation;
 
 import android.graphics.Typeface;
-import com.raven.lair.navigation.BubbleNavigationChangeListener;
+import com.nezuko.extra.navigation.BubbleNavigationChangeListener;
 
 @SuppressWarnings("unused")
 public interface IBubbleNavigation {

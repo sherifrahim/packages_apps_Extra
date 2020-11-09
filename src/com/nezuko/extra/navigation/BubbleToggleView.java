@@ -1,4 +1,4 @@
-package com.raven.lair.navigation;
+package com.nezuko.extra.navigation;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -28,7 +28,7 @@ import android.widget.TextView;
 import com.android.settings.R;
 import com.android.settingslib.Utils;
 
-import com.raven.lair.navigation.ViewUtils;
+import com.nezuko.extra.navigation.ViewUtils;
 
 /**
  * BubbleToggleView
