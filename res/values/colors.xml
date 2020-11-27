@@ -151,5 +151,6 @@
     <color name="colorPurple">#725AFF</color>
     <color name="colorRed">#ffeb0028</color>
     <color name="colorCheese">#ffFFC700</color>
-
+    <!-- FOD icon picker -->
+    <color name="fod_item_background_stroke_color">#d6d6d6</color>
 </resources>
