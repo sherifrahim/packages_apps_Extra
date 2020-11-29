@@ -725,4 +725,9 @@
     <!-- Lock icon -->
     <string name="hide_lockicon_title">Hide lock icon</string>
     <string name="hide_lockicon_summary">Hide the lock icon on lockscreen</string>
+
+    <!-- Screen off fod -->
+    <string name="fod_gesture_title">Screen off FOD</string>
+    <string name="fod_gesture_summary">Allows unlocking the device without having to wake up the screen first</string>
+
 </resources>
