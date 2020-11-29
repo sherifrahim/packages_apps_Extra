@@ -731,4 +731,9 @@
     <string name="fod_icon_animation_zaid_oneui">Samsung OneUI 3</string>
     <string name="fod_icon_animation_oneui2">Samsung OneUI 2</string>
     <string name="fod_icon_animation_oos">OnePlus OxygenOS 11</string>
+
+    <!-- Screen off fod -->
+    <string name="fod_gesture_title">Screen off FOD</string>
+    <string name="fod_gesture_summary">Allows unlocking the device without having to wake up the screen first</string>
+
 </resources>

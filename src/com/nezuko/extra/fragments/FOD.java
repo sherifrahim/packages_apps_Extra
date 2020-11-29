@@ -16,12 +16,13 @@
 package com.nezuko.extra.fragments;
 
 import android.content.res.Resources;
+import android.app.Activity;
 import android.os.Bundle;
 import android.provider.Settings;
 
-import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceScreen;
+import android.os.SystemProperties;
+import android.content.ContentResolver;
+import androidx.preference.*;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 

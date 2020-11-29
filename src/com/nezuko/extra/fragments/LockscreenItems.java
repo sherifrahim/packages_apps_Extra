@@ -20,6 +20,8 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.app.Activity;
+import android.os.SystemProperties;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import androidx.preference.*;
@@ -39,10 +41,27 @@ import java.util.List;
 public class LockscreenItems extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
+    private ContentResolver mResolver;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.lockscreen_items);
+	PreferenceScreen prefScreen = getPreferenceScreen();
+        PreferenceCategory overallPreferences = (PreferenceCategory) findPreference("fod_category");
+        mResolver = getActivity().getContentResolver();
+
+        boolean enableScreenOffFOD = getContext().getResources().
+                getBoolean(com.android.internal.R.bool.config_supportScreenOffFod);
+        Preference ScreenOffFODPref = (Preference) findPreference("fod_gesture");
+
+        if (!enableScreenOffFOD){
+            overallPreferences.removePreference(ScreenOffFODPref);
+        }
+
+        if (!getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint)) {
+            prefScreen.removePreference(findPreference("fod_category"));
+        }
     }
 
     @Override
