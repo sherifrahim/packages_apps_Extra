@@ -18,10 +18,10 @@ package com.nezuko.extra;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
@@ -57,44 +57,55 @@ public class NezukoExtra extends SettingsPreferenceFragment {
 
         final BottomNavigationViewCustom navigation = view.findViewById(R.id.navigation);
 
-        final BubbleNavigationConstraintView bubbleNavigationConstraintView =  (BubbleNavigationConstraintView) view.findViewById(R.id.bottom_navigation_view_constraint);
         final ViewPager viewPager = view.findViewById(R.id.viewpager);
         PagerAdapter mPagerAdapter = new PagerAdapter(getFragmentManager());
         viewPager.setAdapter(mPagerAdapter);
 
-        bubbleNavigationConstraintView.setNavigationChangeListener(new BubbleNavigationChangeListener() {
+        navigation.setOnNavigationItemSelectedListener(
+                new BottomNavigationViewCustom.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationChanged(View view, int position) {
-			int id = view.getId();
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+			int id = item.getItemId();
 				if (id == R.id.system) {
-					viewPager.setCurrentItem(position, true);
+					viewPager.setCurrentItem(0);
+					return true;
 				} else if (id == R.id.lockscreen) {
-					viewPager.setCurrentItem(position, true);
+					viewPager.setCurrentItem(1);
+					return true;
 				} else if (id == R.id.statusbar) {
-					viewPager.setCurrentItem(position, true);
+					viewPager.setCurrentItem(2);
+					return true;
 				} else if (id == R.id.hardware) {
-					viewPager.setCurrentItem(position, true);
+					viewPager.setCurrentItem(3);
+					return true;
 				}
-				
-			    }
-	    
+				return false;
+	    }
         });
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onPageScrolled(int i, float v, int i1) {
+            public void onPageScrolled(int position, float positionOffset,
+                                       int positionOffsetPixels) {
             }
 
             @Override
-            public void onPageSelected(int i) {
-                bubbleNavigationConstraintView.setCurrentActiveItem(i);
+            public void onPageSelected(int position) {
+                if(mMenuItem != null) {
+                    mMenuItem.setChecked(false);
+                } else {
+                    navigation.getMenu().getItem(0).setChecked(false);
+                }
+                navigation.getMenu().getItem(position).setChecked(true);
+                mMenuItem = navigation.getMenu().getItem(position);
             }
 
             @Override
-            public void onPageScrollStateChanged(int i) {
+            public void onPageScrollStateChanged(int state) {
             }
         });
 
         setHasOptionsMenu(true);
+
         return view;
     }
 
