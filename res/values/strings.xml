@@ -75,6 +75,7 @@
     <string name="battery_title">Battery</string>
     <string name="qs">Quick Settings</string>
     <string name="icons">Statusbar icons</string>
+    <string name="UI">User Interface</string>
 
 
     <!-- QS Disco -->
@@ -490,6 +491,7 @@
     <string name="qs_tile_animation_duration_low">Low</string>
     <string name="qs_tile_animation_duration_default">Default</string>
     <string name="qs_tile_animation_duration_fast">Fast</string>
+    <string name="qs_tile_animation_interpolator_title">Tiles animation interpolator</string>
     <string name="qs_tile_animation_interpolator_linearInterpolator">Linear</string>
     <string name="qs_tile_animation_interpolator_accelerateInterpolator">Accelerate</string>
     <string name="qs_tile_animation_interpolator_decelerateInterpolator">Decelerate</string>
@@ -501,6 +503,8 @@
     <string name="qs_set_animation_style">%1$s</string>
     <string name="qs_set_animation_duration">%1$s</string>
     <string name="qs_set_animation_interpolator">%1$s</string>
+
+
 
     <!-- Option to enable/disable scrolling cache -->
     <string name="pref_scrollingcache_title">Scrolling cache</string>
