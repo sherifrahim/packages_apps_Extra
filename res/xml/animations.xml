@@ -17,7 +17,7 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/animation_title">
 
-    <com.dirtyunicorns.support.preferences.SystemSettingListPreference
+    <com.nezuko.extra.preferences.SystemSettingListPreference
         android:key="screen_off_animation"
         android:title="@string/screen_off_animation_title"
         android:entries="@array/screen_off_animation_entries"
