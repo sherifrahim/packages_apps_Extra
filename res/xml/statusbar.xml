@@ -25,6 +25,18 @@
 	        android:title="@string/clock_options_title" />
         </PreferenceCategory>
 
+	<PreferenceCategory
+          android:title="@string/traffic_indicators">
+
+     <Preference
+        android:key="traffic_category"
+        android:fragment="com.nezuko.extra.fragments.TrafficIndicators"
+        android:icon="@drawable/dt_traffic"
+        android:title="@string/traffic_title"
+        android:summary="@string/traffic_summary" />
+
+     </PreferenceCategory>
+
     <PreferenceCategory
             android:title="@string/qs">
         <!-- Quick Settings -->
@@ -98,19 +110,5 @@
          	android:defaultValue="0"/>
     
     </PreferenceCategory>
-
-    
-
-	<PreferenceCategory
-          android:title="@string/traffic_indicators">
-
-     <Preference
-        android:key="traffic_category"
-        android:fragment="com.nezuko.extra.fragments.TrafficIndicators"
-        android:icon="@drawable/dt_traffic"
-        android:title="@string/traffic_title"
-        android:summary="@string/traffic_summary" />
-
-     </PreferenceCategory>
 
 </PreferenceScreen>
