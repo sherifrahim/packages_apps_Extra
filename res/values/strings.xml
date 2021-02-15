@@ -580,4 +580,6 @@
     <string name="qs_datausage_daily">Daily usage</string>
     <string name="qs_datausage_monthly">Monthly usage</string>
 
+    <string name="qs_panel_alpha_title">Background opacity</string>
+
 </resources>

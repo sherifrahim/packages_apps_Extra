@@ -34,6 +34,14 @@
             android:summary="@string/qs_bg_use_disco_summary"
             android:defaultValue="false" />
 
+    <com.nezuko.extras.preferences.SystemSettingSeekBarPreference
+            android:key="qs_panel_bg_alpha"
+            android:title="@string/qs_panel_alpha_title"
+            android:max="255"
+            android:min="100"
+            settings:interval="5"
+            android:defaultValue="255" />
+
      </PreferenceCategory>
 
     <PreferenceCategory
