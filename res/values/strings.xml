@@ -568,7 +568,6 @@
     <string name="power_menu_animation_bottom">Bottom</string>
     <string name="power_menu_animation_top">Top</string>
 
-<<<<<<< HEAD
 
     <!-- QS DataUsage Toggle -->
     <string name="qs_datausage_title">Data usage in QS Header</string>
@@ -577,7 +576,6 @@
     <string name="qs_datausage_monthly">Monthly usage</string>
 
     <string name="qs_panel_alpha_title">Background opacity</string>
-=======
     <!-- Double Tap Gestures -->
     <string name="lockscreen_gestures">Lockscreen Gestures</string>
     <string name="statusbar_gestures">Status Bar Gestures</string>
@@ -589,6 +587,5 @@
     <!-- Lockscreen double tap to sleep -->
     <string name="double_tap_sleep_lockscreen_title">Lockscreen double tap to sleep</string>
     <string name="double_tap_sleep_lockscreen_summary">Double tap anywhere on the lockscreen to put the device to sleep</string>
->>>>>>> 46c34c3ef157e31121c4a971820b363c02110a0a
 
 </resources>
