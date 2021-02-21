@@ -75,6 +75,7 @@
     <string name="battery_title">Battery</string>
     <string name="qs">Quick Settings</string>
     <string name="icons">Statusbar icons</string>
+    <string name="headericons">Header Icons</string>
     <string name="UI">User Interface</string>
 
 
@@ -121,11 +122,6 @@
     <string name="unit_seconds">seconds</string>
     <!-- Custom Categories -->
     <string name="buttons">Buttons</string>
-    <!-- Double Tap gestures -->
-    <string name="double_tap_sleep_lockscreen_title">Double tap to sleep on lockscreen</string>
-    <string name="double_tap_sleep_lockscreen_summary">Double tap anywhere on the lockscreen to put phone to sleep</string>
-    <string name="double_tap_sleep_gesture_title">Double tap to sleep on statusbar</string>
-    <string name="double_tap_sleep_gesture_summary">Double tap on the status bar to put the device to sleep</string>
 
     <!-- Volume Waker -->
     <string name="volume_stuff_title">Volume Button</string>
@@ -568,8 +564,27 @@
     <string name="power_menu_animation_bottom">Bottom</string>
     <string name="power_menu_animation_top">Top</string>
 
+    <!-- QS DataUsage Toggle -->
+    <string name="qs_datausage_title">Data usage in QS Header</string>
+    <string name="qs_datausage_disabled">Disabled</string>
+    <string name="qs_datausage_daily">Daily usage</string>
+    <string name="qs_datausage_monthly">Monthly usage</string>
+
+    <string name="qs_panel_alpha_title">Background opacity</string>
+    <!-- Double Tap Gestures -->
+    <string name="lockscreen_gestures">Lockscreen Gestures</string>
+    <string name="statusbar_gestures">Status Bar Gestures</string>
+
+    <!-- Statusbar double tap to sleep -->
+    <string name="double_tap_to_sleep_title">Status bar double tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
+
+    <!-- Lockscreen double tap to sleep -->
+    <string name="double_tap_sleep_lockscreen_title">Lockscreen double tap to sleep</string>
+    <string name="double_tap_sleep_lockscreen_summary">Double tap anywhere on the lockscreen to put the device to sleep</string>
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
     <string name="lockscreen_battery_info_summary">Show charging current, voltage, wattage and battery temperature on lockscreen while charging</string>
+
 
 </resources>

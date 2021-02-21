@@ -16,6 +16,16 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+    <PreferenceCategory
+            android:title="@string/statusbar_gestures">
+	        <com.nezuko.extra.preferences.SystemSettingSwitchPreference
+	         android:key="double_tap_sleep_gesture"
+	         android:title="@string/double_tap_to_sleep_title"
+	         android:summary="@string/double_tap_to_sleep_summary"
+	         android:defaultValue="true" />
+    </PreferenceCategory>
+
     <PreferenceCategory
             android:title="@string/statusbar_clock">
 		<Preference
@@ -24,6 +34,18 @@
 	        android:summary="@string/clock_options_summary"
 	        android:title="@string/clock_options_title" />
         </PreferenceCategory>
+
+	<PreferenceCategory
+          android:title="@string/traffic_indicators">
+
+     <Preference
+        android:key="traffic_category"
+        android:fragment="com.nezuko.extra.fragments.TrafficIndicators"
+        android:icon="@drawable/dt_traffic"
+        android:title="@string/traffic_title"
+        android:summary="@string/traffic_summary" />
+
+     </PreferenceCategory>
 
     <PreferenceCategory
             android:title="@string/qs">
@@ -98,19 +120,5 @@
          	android:defaultValue="0"/>
     
     </PreferenceCategory>
-
-    
-
-	<PreferenceCategory
-          android:title="@string/traffic_indicators">
-
-     <Preference
-        android:key="traffic_category"
-        android:fragment="com.nezuko.extra.fragments.TrafficIndicators"
-        android:icon="@drawable/dt_traffic"
-        android:title="@string/traffic_title"
-        android:summary="@string/traffic_summary" />
-
-     </PreferenceCategory>
 
 </PreferenceScreen>
