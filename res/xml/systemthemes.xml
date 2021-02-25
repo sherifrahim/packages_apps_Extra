@@ -36,6 +36,11 @@
         android:enabled="false"
         android:defaultValue="false" />
 
+    <!-- Gvisual mod -->
+    <PreferenceCategory
+        android:key="gvisual_category"
+        android:title="@string/gvisual_title" >
+
         <ListPreference
             android:key="navbar_color"
             android:title="@string/navbar_color_title"
@@ -44,11 +49,6 @@
             android:entries="@array/navbar_color_titles"
             android:entryValues="@array/navbar_color_values"
             android:defaultValue="1" />
-
-    <!-- Gvisual mod -->
-    <PreferenceCategory
-        android:key="gvisual_category"
-        android:title="@string/gvisual_title" >
 
         <ListPreference
             android:key="statusbar_height"
