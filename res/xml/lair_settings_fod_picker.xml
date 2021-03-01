@@ -20,7 +20,7 @@
     android:title="@string/fod_icon_picker_title">
 
     <!-- Preview -->
-    <com.raven.lair.preferences.FODIconPicker
+    <com.nezuko.extra.preferences.FODIconPicker
         android:key="fod_icon"
         android:layout="@layout/fod_picker_preference"
         android:selectable="false"/>
