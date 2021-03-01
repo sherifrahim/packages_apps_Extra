@@ -40,8 +40,4 @@
     <!-- Color Picker -->
     <dimen name="oval_notification_size">26dp</dimen>
 
-    <!-- FOD icon picker -->
-    <dimen name="fod_picker_item_margin">10dp</dimen>
-    <dimen name="fod_picker_item_size">100dp</dimen>
-    <dimen name="fod_picker_item_padding">20dp</dimen>
 </resources>
