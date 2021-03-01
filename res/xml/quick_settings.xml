@@ -28,12 +28,6 @@
             android:summary="@string/qs_bg_use_new_tint_summary"
             android:defaultValue="false" />
 
-    <com.nezuko.extra.preferences.SystemSettingSwitchPreference
-            android:key="qs_tiles_bg_disco"
-            android:title="@string/qs_bg_use_disco"
-            android:summary="@string/qs_bg_use_disco_summary"
-            android:defaultValue="false" />
-
     <com.nezuko.extra.preferences.SystemSettingSeekBarPreference
             android:key="qs_panel_bg_alpha"
             android:title="@string/qs_panel_alpha_title"
