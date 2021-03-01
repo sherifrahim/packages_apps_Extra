@@ -28,6 +28,12 @@
         android:title="@string/fprint_sucess_vib_title"
         android:summary="@string/fprint_sucess_vib_summary"
         android:persistent="false" />
+
+    <Preference
+        android:key="fod_category"
+        android:title="@string/fod_category_title"
+        android:fragment="com.nezuko.extra.fragments.FOD" />
+
 </PreferenceCategory>
 
 <PreferenceCategory
@@ -60,37 +66,4 @@
 	         android:summary="@string/double_tap_sleep_lockscreen_summary"
 	         android:defaultValue="true" />
 	</PreferenceCategory>
-
-        <!-- FOD icon picker -->
-        <Preference
-            android:key="fod_icon_picker_category"
-            android:title="@string/fod_icon_picker_title"
-            android:summary="@string/fod_icon_picker_summary"
-            android:fragment="com.nezuko.extra.fragments.FODIconPickerFragment" />
-
-        <!-- FOD pressed color -->
-	<com.nezuko.extra.preferences.SystemSettingListPreference
-            android:key="fod_color"
-            android:dialogTitle="@string/fod_pressed_color_title"
-            android:title="@string/fod_pressed_color_title"
-            android:summary="%s"
-            android:entries="@array/fod_pressed_color_entries"
-            android:entryValues="@array/fod_pressed_color_values"
-            android:defaultValue="@*android:integer/config_fod_pressed_color" />
-
-    <!-- FOD recognizing animation -->
-    <com.nezuko.extra.preferences.SystemSettingSwitchPreference
-            android:key="fod_recognizing_animation"
-            android:title="@string/fod_recog_animation"
-            android:summary="@string/fod_recog_animation_summary"
-            android:defaultValue="false" />
-
-    <com.nezuko.extra.preferences.SystemSettingListPreference 
-            android:key="fod_recognizing_animation_list" 
-            android:title="@string/fod_recog_animation_effect_title" 
-            android:summary="%s" 
-            android:entries="@array/fod_recognizing_animation_entries" 
-            android:entryValues="@array/fod_recognizing_animation_values" 
-            android:defaultValue="0"
-            android:dependency="fod_recognizing_animation" />            
 </PreferenceScreen>

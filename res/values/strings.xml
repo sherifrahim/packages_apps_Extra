@@ -594,6 +594,8 @@
     <string name="header_title">Header sizes</string>
     <string name="header_dialog_title">Select size</string>
 
+    <string name="fod_category_title">FOD customizations</string>
+
     <!-- FOD animations -->
     <string name="fod_recog_animation">FOD recognizing animation</string>
     <string name="fod_recog_animation_summary">Shows an animation while reading your finger</string>
