@@ -22,9 +22,12 @@
 
     <!-- The Team -->
     <string name="dialog_team_title">The team</string>
+    <string name="lead_title">Lead Developer</string>
     <string name="developer_title">Developer</string>
     <string name="maintainer_title">Maintainer</string>
     <string name="contributor_title">Contributor</string>
+    <string name="contributor_main_title">Maintainer/Contributor</string>
+
 
     <!-- Bottom navigation -->
     <string name="navigation_system_title">System</string>

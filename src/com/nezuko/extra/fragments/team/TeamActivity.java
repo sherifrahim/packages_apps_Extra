@@ -48,7 +48,19 @@ public class TeamActivity extends Activity {
     }
     private void initTeam(){
         RecyclerView mRecycleview = findViewById(R.id.listView);
-
+       setTeamMember("Maitreya Patni", getString(R.string.lead_title), "Maitreya29", "Maitreya29",
+                R.drawable.maitreya);
+        setTeamMember("mrStark", getString(R.string.developer_title)
+                + " / " + getString(R.string.contributor_title), "tanishqmanuja", "mrStark0018",
+                R.drawable.stark);
+        setTeamMember("AtomicXZ", getString(R.string.contributor_main_title), "AtomicXZ", "AtomicXZ",
+                R.drawable.atomic);
+       setTeamMember("MR.ROBOT.MK", getString(R.string.maintainer_title), "CoolGuyMK", "SILENT_KILLER404",
+                R.drawable.mrrobot);
+       setTeamMember("Wahid Nursidik", getString(R.string.maintainer_title), "dns24", "attack_dns24",
+                R.drawable.wahid);
+       setTeamMember("Zaid Khan", getString(R.string.maintainer_title), "zaidkhan0997", "zaidkhan0997",
+                R.drawable.zaid);
         ListAdapter mAdapter = new ListAdapter(mList);
         mRecycleview.setAdapter(mAdapter);
         mRecycleview.setLayoutManager(new LinearLayoutManager(this));
