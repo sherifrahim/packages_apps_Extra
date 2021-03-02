@@ -43,14 +43,14 @@
         android:title="@string/animation_title"
         android:summary="@string/animation_summary"
         android:fragment="com.nezuko.extra.fragments.AnimationSettings"
-        android:icon="@drawable/ic_settings_animations" />
+        />
 
         <!-- Themes -->
         <Preference
             android:key="theme_category"
             android:title="@string/theme_type_title"
             android:fragment="com.nezuko.extra.fragments.ThemeSettings"
-            android:icon="@drawable/ic_settings_miscs"/>
+            />
     </PreferenceCategory>
 
 <PreferenceCategory
@@ -61,7 +61,19 @@
         android:key="smart_pixels_enable"
         android:title="@string/smart_pixels_title"
         android:fragment="com.nezuko.extra.fragments.SmartPixels"
-        android:icon="@drawable/dt_battery_options"/>
+        />
+
+</PreferenceCategory>
+
+<PreferenceCategory
+    android:title="@string/pulse_ambient_light_category">
+
+    <!-- Animations -->
+    <Preference
+        android:key="pulse_ambient_light"
+        android:title="@string/pulse_ambient_light_category"
+        android:fragment="com.nezuko.extra.fragments.Edge"
+        />
 
 </PreferenceCategory>
 
