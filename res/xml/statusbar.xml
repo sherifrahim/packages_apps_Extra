@@ -16,6 +16,14 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <PreferenceCategory
+            android:title="@string/qs">
+        <!-- Quick Settings -->
+	<Preference
+	     android:key="quicksettings_category"
+	     android:title="@string/quicksettings_title"
+	     android:fragment="com.nezuko.extra.fragments.QuickSettings"/>
+        </PreferenceCategory>
 
     <PreferenceCategory
             android:title="@string/statusbar_gestures">
@@ -41,22 +49,9 @@
      <Preference
         android:key="traffic_category"
         android:fragment="com.nezuko.extra.fragments.TrafficIndicators"
-        android:icon="@drawable/dt_traffic"
         android:title="@string/traffic_title"
         android:summary="@string/traffic_summary" />
-
      </PreferenceCategory>
-
-    <PreferenceCategory
-            android:title="@string/qs">
-        <!-- Quick Settings -->
-	<Preference
-	     android:key="quicksettings_category"
-	     android:title="@string/quicksettings_title"
-	     android:fragment="com.nezuko.extra.fragments.QuickSettings"
-	     android:icon="@drawable/dt_quicksettings"/>
-        </PreferenceCategory>
-
     <PreferenceCategory
             android:title="@string/icons">
     <PreferenceScreen
