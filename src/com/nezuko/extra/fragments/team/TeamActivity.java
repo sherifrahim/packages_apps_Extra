@@ -61,6 +61,8 @@ public class TeamActivity extends Activity {
                 R.drawable.wahid);
        setTeamMember("Zaid Khan", getString(R.string.maintainer_title), "zaidkhan0997", "zaidkhan0997",
                 R.drawable.zaid);
+       setTeamMember("Muhammad Fauzan", getString(R.string.maintainer_title), "xzanxz", "buglessx",
+                R.drawable.xzanxz);
         ListAdapter mAdapter = new ListAdapter(mList);
         mRecycleview.setAdapter(mAdapter);
         mRecycleview.setLayoutManager(new LinearLayoutManager(this));
