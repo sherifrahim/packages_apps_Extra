@@ -56,12 +56,18 @@
 <PreferenceCategory
     android:title="@string/battery_title">
 
+    <!-- Sensor Block -->
+    <Preference
+        android:key="sensor_block_settings"
+        android:title="@string/sensor_block_title"
+        android:summary="@string/sensor_block_summary"
+        android:fragment="com.nezuko.extra.fragments.SensorBlockSettings"/>
+
     <!-- Smart Pixels -->
     <Preference
         android:key="smart_pixels_enable"
         android:title="@string/smart_pixels_title"
-        android:fragment="com.nezuko.extra.fragments.SmartPixels"
-        />
+        android:fragment="com.nezuko.extra.fragments.SmartPixels"/>
 
 </PreferenceCategory>
 
