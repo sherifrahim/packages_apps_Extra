@@ -42,6 +42,34 @@
 
 </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/doze_brightness_category">
+
+        <com.nezuko.extra.preferences.SystemSettingSwitchPreference
+            android:key="doze_brightness_force"
+            android:title="@string/doze_brightness_force_title"
+            android:summary="@string/doze_brightness_force_summary"
+            android:defaultValue="false" />
+
+        <com.nezuko.extra.preferences.CustomSeekBarPreference
+            android:key="ambient_doze_brightness"
+            android:title="@string/ambient_doze_brightness_title"
+            android:summary="@string/ambient_doze_brightness_summary"
+            android:max="255"
+            android:min="1"
+            android:persistent="false" />
+
+        <com.nezuko.extra.preferences.CustomSeekBarPreference
+            android:key="ambient_pulse_brightness"
+            android:title="@string/ambient_pulse_brightness_title"
+            android:summary="@string/ambient_pulse_brightness_summary"
+            android:max="255"
+            android:min="1"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
+
 <PreferenceCategory
     android:title="@string/lockscreen">
     <com.nezuko.extra.preferences.SystemSettingSwitchPreference
