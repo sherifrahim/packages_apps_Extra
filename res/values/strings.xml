@@ -80,7 +80,9 @@
     <string name="icons">Statusbar icons</string>
     <string name="headericons">Header Icons</string>
     <string name="UI">User Interface</string>
-
+    <string name="general_title">Notifications</string>
+    <string name="notification_guts_kill_app_button_title">Kill app button</string>
+    <string name="notification_guts_kill_app_button_summary">Show a kill app button in the notification\'s longpress menu</string>
 
     <!-- QS Disco -->
     <string name="qs_tiles_title">Tiles</string>
