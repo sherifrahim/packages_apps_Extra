@@ -3,6 +3,9 @@ NezukoExtras
 
 A flexible, easy to use, all in one tweaks app for AOSP!
 
+Don't clone this repo as is and rebrand and call it your own. Any such attempts to rebrand without making modifications of a major scale are not appreciated. Please be a good member of the OSS community.
+While picking or copying anything from this repo, maintaining authorship is a must.
+
 ## License
     
     Copyright (C) 2021 NezukoOS
