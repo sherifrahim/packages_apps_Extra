@@ -394,6 +394,7 @@
     <string name="smart_pixels_on_power_save_summary">Enable with battery saver to increase power savings</string>
     <string name="smart_pixels_percent">Percent of pixels to disable</string>
     <string name="smart_pixels_shift">Burn-in protection interval</string>
+    <string name="smart_pixels_warning_text">Smart pixels is a power saving feature. Depending on how many pixels you decide to turn off, you could see improvement in battery life. Note that in some cases it can result in unresponsive areas on touch screen</string>
     <!-- VoWiFi icon -->
     <string name="vowifi_icon_title">VoWiFi icon</string>
     <string name="vowifi_icon_enabled">VoWiFi icon enabled</string>
@@ -519,6 +520,7 @@
     <string name="header_title">Header sizes</string>
     <string name="header_dialog_title">Select size</string>
     <string name="fod_category_title">FOD customizations</string>
+    <string name="fod_icon_picker">FOD icon picker</string>
     <!-- FOD animations -->
     <string name="fod_recog_animation">FOD recognizing animation</string>
     <string name="fod_recog_animation_summary">Shows an animation while reading your finger</string>
