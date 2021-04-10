@@ -259,6 +259,10 @@
     <string name="volume_panel_oreo">Oreo</string>
     <string name="volume_panel_tiled">Tiled</string>
 
+    <!-- Nightlight Fod -->
+    <string name="fod_night_light_title">Disable night light when showing FOD</string>
+    <string name="fod_night_light_summary">Disable night light on lockscreen if FOD is active. Disabling this option might affect your fingerprint accuracy with night light on.</string>
+
    <!-- Partial screenshot -->
     <string name="ss">Screenshot</string>
     <string name="click_partial_screenshot_title">Click to partial screenshot</string>
