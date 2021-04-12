@@ -28,6 +28,12 @@
             android:title="@string/click_partial_screenshot_title"
             android:summary="@string/click_partial_screenshot_summary"
             android:defaultValue="false" />
+        <com.nezuko.extra.preferences.SystemSettingSwitchPreference
+            android:key="invert_partial_screenshot"
+            android:dependency="click_partial_screenshot"
+            android:title="@string/click_partial_screenshot_invert_title"
+            android:summary="@string/click_partial_screenshot_invert_summary"
+            android:defaultValue="false" />
 
      <PreferenceCategory
      android:key="power_button_category"
