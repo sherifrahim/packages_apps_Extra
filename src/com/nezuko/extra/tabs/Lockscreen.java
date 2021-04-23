@@ -69,13 +69,10 @@ public class Lockscreen extends SettingsPreferenceFragment
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
         mFODIconPickerCategory = findPreference(FOD_ICON_PICKER_CATEGORY);
 
-        if (!mFingerprintManager.isHardwareDetected()){
+        if (!getResources().getBoolean(R.bool.has_fingerprint_prefs)) {
+            if (mFingerprintVib != null) {
             prefScreen.removePreference(mFingerprintVib);
-        } else {
-            mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
-                    Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
-            mFingerprintVib.setOnPreferenceChangeListener(this);
-        }
+        } 
         if (mFODIconPickerCategory != null && !FodUtils.hasFodSupport(getContext())) {
             prefScreen.removePreference(mFODIconPickerCategory);
         }
