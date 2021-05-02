@@ -55,6 +55,7 @@ android:title="@string/buttons_title">
     <com.nezuko.extra.preferences.SecureSettingSwitchPreference
         android:key="sysui_nav_bar_inverse"
         android:title="@string/navbar_invert_layout_title"
+        android:summary="@string/navbar_invert_layout_summary"
         android:defaultValue="false" />
 
 

@@ -86,6 +86,7 @@
     <Preference
         android:key="smart_pixels_enable"
         android:title="@string/smart_pixels_title"
+        android:summary="@string/smart_pixels_summary"
         android:fragment="com.nezuko.extra.fragments.SmartPixels"/>
 
 </PreferenceCategory>
@@ -97,6 +98,7 @@
     <Preference
         android:key="pulse_ambient_light"
         android:title="@string/pulse_ambient_light_category"
+        android:summary="@string/pulse_ambient_light_summary"
         android:fragment="com.nezuko.extra.fragments.Edge"
         />
 
