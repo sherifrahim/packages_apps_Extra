@@ -61,7 +61,7 @@ android:title="@string/buttons_title">
 
     <PreferenceCategory
         android:key="haptic_category"
-        android:title="@string/incall_vibration_category">
+        android:title="@string/haptic_category">
 
         <com.nezuko.extra.preferences.SystemSettingSwitchPreference
             android:key="vibrate_on_connect"
