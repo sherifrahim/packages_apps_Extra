@@ -82,7 +82,7 @@
             android:key="qs_rows_portrait"
             android:title="@string/qs_rows_portrait_title"
             android:max="5"
-            android:min="1"
+            android:min="2"
             android:defaultValue="3"
             settings:units="" />
 
@@ -90,7 +90,7 @@
             android:key="qs_rows_landscape"
             android:title="@string/qs_rows_landscape_title"
             android:max="5"
-            android:min="1"
+            android:min="2"
             android:defaultValue="1"
             settings:units="" />
 
