@@ -72,6 +72,4 @@
     <color name="colorPurple">#B5A9FC</color>
     <color name="colorRed">#ffeb0028</color>
     <color name="colorCheese">#ffFFD955</color>
-    <color name="fod_item_background_stroke_color">#555555</color>
-
 </resources>
