@@ -49,12 +49,14 @@ public class Lockscreen extends SettingsPreferenceFragment
     private static final String KEY_DOZE_BRIGHTNESS = "ambient_doze_brightness";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
+    private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
 
     private CustomSeekBarPreference mPulseBrightness;
     private CustomSeekBarPreference mDozeBrightness;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
     private PreferenceCategory mFODIconPickerCategory;
+    private SystemSettingSwitchPreference mScreenOffFOD;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,6 +70,13 @@ public class Lockscreen extends SettingsPreferenceFragment
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
         mFODIconPickerCategory = findPreference(FOD_ICON_PICKER_CATEGORY);
+
+        boolean mScreenOffFODValue = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.SCREEN_OFF_FOD, 0) != 0;
+
+        mScreenOffFOD = (SwitchPreference) findPreference(KEY_SCREEN_OFF_FOD);
+        mScreenOffFOD.setChecked(mScreenOffFODValue);
+        mScreenOffFOD.setOnPreferenceChangeListener(this);
 
         if (!mFingerprintManager.isHardwareDetected()){
             prefScreen.removePreference(mFingerprintVib);
@@ -119,6 +128,11 @@ public class Lockscreen extends SettingsPreferenceFragment
             int value = (Integer) newValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.DOZE_BRIGHTNESS, value);
+            return true;
+        } else if (preference == mScreenOffFOD) {
+            int mScreenOffFODValue = (Boolean) newValue ? 1 : 0;
+            Settings.System.putInt(resolver, Settings.System.SCREEN_OFF_FOD, mScreenOffFODValue);
+            Settings.Secure.putInt(resolver, Settings.Secure.DOZE_ALWAYS_ON, mScreenOffFODValue);
             return true;
         }
 
