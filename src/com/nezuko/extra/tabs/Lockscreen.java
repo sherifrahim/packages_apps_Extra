@@ -41,7 +41,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
 import com.nezuko.extra.preferences.CustomSeekBarPreference;
-
+import com.nezuko.extra.preferences.SystemSettingSwitchPreference;
 public class Lockscreen extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
