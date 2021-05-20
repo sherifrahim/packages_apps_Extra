@@ -170,11 +170,13 @@
     <string name="volte_icon_asus">華碩 VoLTE 圖示</string>
     <string name="volte_icon_vo">停用</string>
     <string name="volte_icon_volte">VoLTE 圖示</string>
-    <string name="volte_icon_oos">氧OS VoLTE 圖示</string>
+    <string name="volte_icon_oos">VoLTE OOS 10 Icon</string>
+    <string name="volte_icon_oos11">VoLTE OOS 11 Icon</string>
     <string name="volte_icon_hd">HD 圖示</string>
     <string name="volte_icon_hd2">HD CAF 圖示</string>
     <string name="volte_icon_miui">MIUI 11</string>
     <string name="volte_icon_emui">EMUI</string>
+    <string name="volte_icon_moto">VoLTE Motorola Icon</string>
     <!-- Accent colours -->
     <string name="prebuilt_accents_title">主題色</string>
     <string name="prebuilt_accents_summary">選擇要套用到整個系統的顏色</string>
@@ -187,9 +189,14 @@
     <string name="accent_color_title">RGB選色器</string>
     <string name="default_string">預設</string>
     <string name="themer_title">主題</string>
-    <!-- QS tint -->
-    <string name="qs_bg_use_new_tint">以主色調為快速設定圖示著色</string>
-    <string name="qs_bg_use_new_tint_summary">以主題色著色快速設定圖塊</string>
+    <!-- Accent QS tint -->
+    <string name="qs_bg_use_new_tint">Tint QS tiles</string>
+    <string name="qs_bg_use_new_tint_summary">Choose the QS Tint Style</string>
+    <string name="qs_tint_off">Default</string>
+    <string name="qs_tint_accent">Accent Color</string>
+    <string name="qs_tint_oos">OxygenOS 11</string>
+    <string name="qs_tint_twelve">Android 12</string>
+    <string name="qs_tint_oos_slider">OxygenOS 11 + Brightness slider</string>
     <!-- Themer -->
     <string name="theme_customization_icon_shape_title">應用程式形狀</string>
     <string name="theme_customization_sysui_icons_title">theme_customization_sysui_icons_title</string>
@@ -215,12 +222,25 @@
     <string name="status_bar_custom_header_shadow_summary">讓較亮的圖片擁有更好的顯示效果</string>
     <string name="status_bar_custom_header_shadow_title">標頭圖片陰影</string>
     <string name="unit_percent">\u0025</string>
+    <string name="horizon_light_show_always_title">顯示所有打盹事件</string>
+    <string name="horizon_light_show_always_summary">在所有打盹事件時顯示燈光，而不僅僅是通知</string>
     <!-- Volume Panel Plugin -->
     <string name="volume_panel">音量面板樣式</string>
     <string name="volume_panel_aosp">AOSP</string>
     <string name="volume_panel_compact">緊湊</string>
     <string name="volume_panel_oreo">Oreo</string>
     <string name="volume_panel_tiled">圖塊</string>
+    <string name="navbar_invert_layout_summary">Use inverted layout for 3 buttons navbar</string>
+    <string name="navbar_invert_layout_title">反轉版面</string>
+    <!-- Nightlight Fod -->
+    <string name="fod_night_light_title">顯示指紋識別時禁用小夜燈</string>
+    <string name="fod_night_light_summary">如果指紋識別已啟用，請在鎖屏上禁用夜燈。禁用此選項可能會在夜燈開啟時影響您的指紋準確性。</string>
+    <!-- Partial screenshot -->
+    <string name="ss">螢幕截圖</string>
+    <string name="click_partial_screenshot_title">點擊以截取部分屏幕截圖</string>
+    <string name="click_partial_screenshot_summary">短按“調低音量”和“電源”以截取部分屏幕截圖</string>
+    <string name="click_partial_screenshot_invert_title">長按以部分屏幕截圖</string>
+    <string name="click_partial_screenshot_invert_summary">長按“調低音量”和“電源”以截取部分屏幕截圖。</string>
     <!-- Volume Panel Plugin Values -->
     <!-- Volume rocker music control -->
     <string name="volume_rocker_music_controls_title">播放控制</string>
@@ -405,6 +425,7 @@
     <string name="vowifi_icon_emui">EMUI</string>
     <string name="vowifi_icon_asus">華碩</string>
     <string name="vowifi_icon_oneplus">氧OS</string>
+    <string name="vowifi_icon_oos11">OOS 11 Icon</string>
     <string name="vowifi_icon_moto">Motorola</string>
     <string name="vowifi_icon_simple1">簡易 1</string>
     <string name="vowifi_icon_simple2">簡易 2</string>
@@ -417,7 +438,7 @@
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">縮放</string>
     <!-- Tiles animation style  -->
-    <string name="qs_tile_animation_title">動畫</string>
+    <string name="qs_tile_animation_title">QS Tiles Animations</string>
     <string name="qs_tile_animation_style_title">動畫樣式</string>
     <string name="qs_tile_animation_duration_title">動畫長度</string>
     <string name="qs_tile_animation_style_off">停用動畫</string>
@@ -604,4 +625,12 @@
     <string name="ambient_doze_brightness_summary">設定微光螢幕的亮度</string>
     <string name="lockscreen_qs_disabled_title">鎖定時停用快速設定</string>
     <string name="lockscreen_qs_disabled_summary">在鎖定狀態下停用快速設定頁面</string>
+    <!-- Incall vibrate options -->
+    <string name="haptic_category">Haptics</string>
+    <string name="incall_vibrate_connect_title">Vibrate on connect</string>
+    <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
+    <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
+    <!-- Lock icon -->
+    <string name="hide_lockicon_title">Hide lock icon</string>
+    <string name="hide_lockicon_summary">Hide the lock icon on lockscreen</string>
 </resources>

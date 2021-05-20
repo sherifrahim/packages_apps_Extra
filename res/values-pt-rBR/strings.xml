@@ -170,11 +170,13 @@
     <string name="volte_icon_asus">Ícone VoLTE da Asus</string>
     <string name="volte_icon_vo">Desativado</string>
     <string name="volte_icon_volte">Ícone de VoLTE</string>
-    <string name="volte_icon_oos">Ícone VoLTE do OOS</string>
+    <string name="volte_icon_oos">Ícone VoLTE do OOS 10</string>
+    <string name="volte_icon_oos11">Ícone VoLTE do OOS 11</string>
     <string name="volte_icon_hd">Ícone HD</string>
     <string name="volte_icon_hd2">Ícone CAF HD</string>
     <string name="volte_icon_miui">MIUI 11</string>
     <string name="volte_icon_emui">EMUI</string>
+    <string name="volte_icon_moto">Ícone VoLTE Motorola</string>
     <!-- Accent colours -->
     <string name="prebuilt_accents_title">Cores de destaque</string>
     <string name="prebuilt_accents_summary">Escolha um destaque para aplicar em todo o sistema</string>
@@ -187,9 +189,14 @@
     <string name="accent_color_title">Seletor de cores de destaque RGB</string>
     <string name="default_string">Padrão</string>
     <string name="themer_title">Tematização</string>
-    <!-- QS tint -->
-    <string name="qs_bg_use_new_tint">Colorir as QS tiles usando a cor de destaque</string>
-    <string name="qs_bg_use_new_tint_summary">Ativar a pintura de cor de destaque nas QS tiles. Reinicio necessário</string>
+    <!-- Accent QS tint -->
+    <string name="qs_bg_use_new_tint">Tintura dos ícones da QS tile</string>
+    <string name="qs_bg_use_new_tint_summary">Escolha as cores dos ícones da QS tile</string>
+    <string name="qs_tint_off">Padrão</string>
+    <string name="qs_tint_accent">Cor de destaque</string>
+    <string name="qs_tint_oos">OxygenOS 11</string>
+    <string name="qs_tint_twelve">Android 12</string>
+    <string name="qs_tint_oos_slider">OxygenOS 11 + Controle deslizante de brilho</string>
     <!-- Themer -->
     <string name="theme_customization_icon_shape_title">Seletor da forma de ícone dos apps</string>
     <string name="theme_customization_sysui_icons_title">theme_customization_sysui_icons_title</string>
@@ -215,12 +222,25 @@
     <string name="status_bar_custom_header_shadow_summary">Para melhor visibilidade em imagens claras</string>
     <string name="status_bar_custom_header_shadow_title">Sombra de imagem do cabeçalho</string>
     <string name="unit_percent">\u0025</string>
+    <string name="horizon_light_show_always_title">Mostrar para todos os eventos Doze</string>
+    <string name="horizon_light_show_always_summary">Mostrar luzes para todos os eventos Doze e não apenas notificações</string>
     <!-- Volume Panel Plugin -->
     <string name="volume_panel">Estilo do painel de volume</string>
     <string name="volume_panel_aosp">AOSP</string>
     <string name="volume_panel_compact">Compacto</string>
     <string name="volume_panel_oreo">Oreo</string>
     <string name="volume_panel_tiled">Pintado</string>
+    <string name="navbar_invert_layout_summary">Usar layout invertido para a navegação com 3 botões</string>
+    <string name="navbar_invert_layout_title">Inverter layout</string>
+    <!-- Nightlight Fod -->
+    <string name="fod_night_light_title">Desabilita a Luz Noturna quando mostrando o FOD</string>
+    <string name="fod_night_light_summary">Desabilita a Luz Noturna na tela de bloqueio se o FOD estiver ativo. Desabilitar esta opção poderá afetar a precisão da sua impressão digital com a Luz Noturna ativa.</string>
+    <!-- Partial screenshot -->
+    <string name="ss">Captura de tela</string>
+    <string name="click_partial_screenshot_title">Clique para tirar uma captura de tela parcial</string>
+    <string name="click_partial_screenshot_summary">Pressione rapidamente o Volume Menos e Power para tirar uma captura de tela parcial</string>
+    <string name="click_partial_screenshot_invert_title">Captura de tela parcial ao manter pressionado</string>
+    <string name="click_partial_screenshot_invert_summary">Mantenha pressionado Volume Menos e o Power para tirar uma captura de tela parcial.</string>
     <!-- Volume Panel Plugin Values -->
     <!-- Volume rocker music control -->
     <string name="volume_rocker_music_controls_title">Controle de reprodução</string>
@@ -394,7 +414,7 @@
     <string name="smart_pixels_on_power_save_summary">Ative com economia de bateria para aumentar a economia de energia</string>
     <string name="smart_pixels_percent">Porcentagem de pixels para desativar</string>
     <string name="smart_pixels_shift">Intervalo de proteção de burn-in</string>
-    <string name="smart_pixels_warning_text">Smart pixels is a power saving feature. Depending on how many pixels you decide to turn off, you could see improvement in battery life. Note that in some cases it can result in unresponsive areas on touch screen</string>
+    <string name="smart_pixels_warning_text">Pixels Inteligentes é um recurso de economia de bateria. Dependendo de quantos pixels você decide desligar, poderá ver melhora na duração da bateria. Note que em alguns casos isto pode resultar em áreas não responsivas da tela</string>
     <!-- VoWiFi icon -->
     <string name="vowifi_icon_title">Ícone VoWiFi</string>
     <string name="vowifi_icon_enabled">Ícone VoWiFi habilitado</string>
@@ -405,6 +425,7 @@
     <string name="vowifi_icon_emui">Ícone EMUI</string>
     <string name="vowifi_icon_asus">Ícone Asus</string>
     <string name="vowifi_icon_oneplus">Ícone OOS</string>
+    <string name="vowifi_icon_oos11">Ícone OOS 11</string>
     <string name="vowifi_icon_moto">Ícone Motorola</string>
     <string name="vowifi_icon_simple1">Ícone simples1</string>
     <string name="vowifi_icon_simple2">Ícone simples2</string>
@@ -417,7 +438,7 @@
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">Escala</string>
     <!-- Tiles animation style  -->
-    <string name="qs_tile_animation_title">Animações</string>
+    <string name="qs_tile_animation_title">Animações dos ícones da QS tile</string>
     <string name="qs_tile_animation_style_title">Estilo de animação</string>
     <string name="qs_tile_animation_duration_title">Duração da animação</string>
     <string name="qs_tile_animation_style_off">Sem animação</string>
@@ -520,7 +541,7 @@
     <string name="header_title">Tamanhos do Cabeçalho</string>
     <string name="header_dialog_title">Selecione o tamanho</string>
     <string name="fod_category_title">Personalizações da FOD</string>
-    <string name="fod_icon_picker">FOD icon picker</string>
+    <string name="fod_icon_picker">Seletor de ícones do FOD</string>
     <!-- FOD animations -->
     <string name="fod_recog_animation">Animação de reconhecimento da FOD</string>
     <string name="fod_recog_animation_summary">Mostrar uma animação ao ler seu dedo</string>
@@ -604,4 +625,12 @@
     <string name="ambient_doze_brightness_summary">Defina o brilho para usar durante a tela ambiente</string>
     <string name="lockscreen_qs_disabled_title">Desativar configurações rápidas quando bloqueado</string>
     <string name="lockscreen_qs_disabled_summary">Desative a expansão das configurações rápidas em telas de bloqueio seguras</string>
+    <!-- Incall vibrate options -->
+    <string name="haptic_category">Vibrações</string>
+    <string name="incall_vibrate_connect_title">Vibrar ao conectar</string>
+    <string name="incall_vibrate_call_wait_title">Vibrar na ligação em espera</string>
+    <string name="incall_vibrate_disconnect_title">Vibrar ao desconectar</string>
+    <!-- Lock icon -->
+    <string name="hide_lockicon_title">Esconder ícone de bloqueio</string>
+    <string name="hide_lockicon_summary">Esconder ícone de bloqueio da lockscreen</string>
 </resources>

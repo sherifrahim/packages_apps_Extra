@@ -171,10 +171,12 @@
     <string name="volte_icon_vo">Devre dışı</string>
     <string name="volte_icon_volte">VoLTE Simgesi</string>
     <string name="volte_icon_oos">OOS VoLTE Simgesi</string>
+    <string name="volte_icon_oos11">OOS 11 VoLTE Simgesi</string>
     <string name="volte_icon_hd">HD Simgesi</string>
     <string name="volte_icon_hd2">HD CAF Simgesi</string>
     <string name="volte_icon_miui">MIUI 11</string>
     <string name="volte_icon_emui">EMUI</string>
+    <string name="volte_icon_moto">VoLTE Motorola Icon</string>
     <!-- Accent colours -->
     <string name="prebuilt_accents_title">Vurgu renkleri</string>
     <string name="prebuilt_accents_summary">Sistem genelinde uygulamak için bir tema seçin</string>
@@ -187,9 +189,14 @@
     <string name="accent_color_title">RGB vurgu renk seçici</string>
     <string name="default_string">Varsayılan</string>
     <string name="themer_title">Tema oluşturucu</string>
-    <!-- QS tint -->
-    <string name="qs_bg_use_new_tint">Vurgu rengi kullanarak Hızlı ayar karelerini renklendirin</string>
-    <string name="qs_bg_use_new_tint_summary">Hızlı ayar karelerinde vurgulu renk tonunu etkinleştirin</string>
+    <!-- Accent QS tint -->
+    <string name="qs_bg_use_new_tint">Hızlı ayarlar kare renkleri</string>
+    <string name="qs_bg_use_new_tint_summary">Hızlı ayarlar kareleri ve arka planı için vurgu rengi kullanın</string>
+    <string name="qs_tint_off">Varsayılan</string>
+    <string name="qs_tint_accent">Vurgu rengi</string>
+    <string name="qs_tint_oos">OxygenOS 11</string>
+    <string name="qs_tint_twelve">Android 12</string>
+    <string name="qs_tint_oos_slider">OxygenOS 11 + Parlaklık kaydırıcısı</string>
     <!-- Themer -->
     <string name="theme_customization_icon_shape_title">Uygulama simgesi şekli seçici</string>
     <string name="theme_customization_sysui_icons_title">theme_customization_sysui_icons_title</string>
@@ -215,12 +222,25 @@
     <string name="status_bar_custom_header_shadow_summary">Parlak görüntülerde daha iyi bir görünürlük için</string>
     <string name="status_bar_custom_header_shadow_title">Üstbaşlık görseli gölgesi</string>
     <string name="unit_percent">\u0025</string>
+    <string name="horizon_light_show_always_title">Tüm doz etkinliklerini göster</string>
+    <string name="horizon_light_show_always_summary">Yalnızca bildirimleri değil, tüm doz etkinlikleri için ışıkları gösterin</string>
     <!-- Volume Panel Plugin -->
     <string name="volume_panel">Ses paneli stili</string>
     <string name="volume_panel_aosp">AOSP</string>
     <string name="volume_panel_compact">Kompakt</string>
     <string name="volume_panel_oreo">Oreo</string>
     <string name="volume_panel_tiled">Kutucuklar</string>
+    <string name="navbar_invert_layout_summary">3 düğmeli gezinme çubuğu için ters çevrilmiş düzen kullanın</string>
+    <string name="navbar_invert_layout_title">Düzeni ters çevir</string>
+    <!-- Nightlight Fod -->
+    <string name="fod_night_light_title">FOD gösterilirken gece ışığını devre dışı bırakın</string>
+    <string name="fod_night_light_summary">FOD etkinse, kilit ekranındaki gece ışığını devre dışı bırakın. Bu seçeneğin devre dışı bırakılması, gece ışığı açıkken parmak izinizin doğruluğunu etkileyebilir.</string>
+    <!-- Partial screenshot -->
+    <string name="ss">Ekran Görüntüsü</string>
+    <string name="click_partial_screenshot_title">Kısmi ekran görüntüsü için tıklayın</string>
+    <string name="click_partial_screenshot_summary">Kısmi ekran görüntüsü almak için Ses Kısma ve Güç tuşlarına kısa basın</string>
+    <string name="click_partial_screenshot_invert_title">Uzun basıldığında kısmi ekran görüntüsü</string>
+    <string name="click_partial_screenshot_invert_summary">Kısmi ekran görüntüsü almak için Sesi Kısma ve Güç düğmesine uzun basın.</string>
     <!-- Volume Panel Plugin Values -->
     <!-- Volume rocker music control -->
     <string name="volume_rocker_music_controls_title">Oynatma kontrolü</string>
@@ -405,6 +425,7 @@
     <string name="vowifi_icon_emui">EMUI Simgesi</string>
     <string name="vowifi_icon_asus">Asus Simgesi</string>
     <string name="vowifi_icon_oneplus">OOS Simgesi</string>
+    <string name="vowifi_icon_oos11">OOS 11 Simgesi</string>
     <string name="vowifi_icon_moto">Motorola Simgesi</string>
     <string name="vowifi_icon_simple1">Simple1 Simgesi</string>
     <string name="vowifi_icon_simple2">Simple2 Simgesi</string>
@@ -417,7 +438,7 @@
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">Ölçek</string>
     <!-- Tiles animation style  -->
-    <string name="qs_tile_animation_title">Animasyonlar</string>
+    <string name="qs_tile_animation_title">Hızlı Ayarlar Tuş Animasyonları</string>
     <string name="qs_tile_animation_style_title">Animasyon stili</string>
     <string name="qs_tile_animation_duration_title">Animasyon süresi</string>
     <string name="qs_tile_animation_style_off">Animasyon yok</string>
@@ -604,4 +625,12 @@
     <string name="ambient_doze_brightness_summary">Ortam ekranı açıkken kullanılacak parlaklığı ayarlayın</string>
     <string name="lockscreen_qs_disabled_title">Ekran kilitlendiğinde hızlı ayarları devre dışı bırakın</string>
     <string name="lockscreen_qs_disabled_summary">Güvenli kilit ekranlarında genişleyen hızlı ayarları devre dışı bırakın</string>
+    <!-- Incall vibrate options -->
+    <string name="haptic_category">Haptik titreşim</string>
+    <string name="incall_vibrate_connect_title">Bağlandığında titret</string>
+    <string name="incall_vibrate_call_wait_title">Çağrı bekletildiğinde titret</string>
+    <string name="incall_vibrate_disconnect_title">Bağlantı kesildiğinde titret</string>
+    <!-- Lock icon -->
+    <string name="hide_lockicon_title">Kilit ikonunu gizle</string>
+    <string name="hide_lockicon_summary">Kilit ekranındaki kilit simgesini gizle</string>
 </resources>

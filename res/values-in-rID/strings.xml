@@ -170,11 +170,13 @@
     <string name="volte_icon_asus">Ikon VoLTE Asus</string>
     <string name="volte_icon_vo">Dinonaktifkan</string>
     <string name="volte_icon_volte">Ikon VoLTE</string>
-    <string name="volte_icon_oos">Ikon VoLTE OOS</string>
+    <string name="volte_icon_oos">Ikon VoLTE OOS 10</string>
+    <string name="volte_icon_oos11">Ikon VoLTE OOS 11</string>
     <string name="volte_icon_hd">Ikon HD</string>
     <string name="volte_icon_hd2">Ikon HD CAF</string>
     <string name="volte_icon_miui">MIUI 11</string>
     <string name="volte_icon_emui">EMUI</string>
+    <string name="volte_icon_moto">Ikon VoLTE Motorola</string>
     <!-- Accent colours -->
     <string name="prebuilt_accents_title">Warna Aksen</string>
     <string name="prebuilt_accents_summary">Pilih aksen untuk diterapkan di seluruh sistem</string>
@@ -187,9 +189,14 @@
     <string name="accent_color_title">Pemilih warna aksen RGB</string>
     <string name="default_string">Bawaan</string>
     <string name="themer_title">Tema-tema</string>
-    <!-- QS tint -->
-    <string name="qs_bg_use_new_tint">Warna ubin QS menggunakan warna aksen</string>
-    <string name="qs_bg_use_new_tint_summary">Aktifkan rona warna aksen pada ubin QS</string>
+    <!-- Accent QS tint -->
+    <string name="qs_bg_use_new_tint">Warna Ubin QS</string>
+    <string name="qs_bg_use_new_tint_summary">Pilih Gaya Warna QS</string>
+    <string name="qs_tint_off">Bawaan</string>
+    <string name="qs_tint_accent">Warna Aksen</string>
+    <string name="qs_tint_oos">OxygenOS 11</string>
+    <string name="qs_tint_twelve">Android 12</string>
+    <string name="qs_tint_oos_slider">OxygenOS 11 + Slider kecerahan</string>
     <!-- Themer -->
     <string name="theme_customization_icon_shape_title">Pemilih untuk ikon aplikasi</string>
     <string name="theme_customization_sysui_icons_title">theme_customization_sysui_icons_title</string>
@@ -215,12 +222,25 @@
     <string name="status_bar_custom_header_shadow_summary">Untuk visibilitas yang lebih baik pada gambar yang cerah</string>
     <string name="status_bar_custom_header_shadow_title">Bayangan gambar header</string>
     <string name="unit_percent">\u0025</string>
+    <string name="horizon_light_show_always_title">Tampilkan untuk semua acara istirahat</string>
+    <string name="horizon_light_show_always_summary">Tampilkan cahaya untuk semua acara istirahat dan bukan hanya notifikasi</string>
     <!-- Volume Panel Plugin -->
     <string name="volume_panel">Gaya Panel Suara</string>
     <string name="volume_panel_aosp">AOSP</string>
     <string name="volume_panel_compact">Compact</string>
     <string name="volume_panel_oreo">Oreo</string>
     <string name="volume_panel_tiled">Tiled</string>
+    <string name="navbar_invert_layout_summary">Gunakan tata letak terbalik untuk 3 tombol navigasi</string>
+    <string name="navbar_invert_layout_title">Tukar tata letak</string>
+    <!-- Nightlight Fod -->
+    <string name="fod_night_light_title">Nonaktifkan cahaya malam saat menampilkan FOD</string>
+    <string name="fod_night_light_summary">Nonaktifkan cahaya malam di layar kunci jika FOD aktif. Menonaktifkan opsi ini dapat memengaruhi keakuratan sidik jari Anda dengan cahaya malam menyala.</string>
+    <!-- Partial screenshot -->
+    <string name="ss">Tangkap Layar</string>
+    <string name="click_partial_screenshot_title">Klik untuk tangkapan layar sebagian</string>
+    <string name="click_partial_screenshot_summary">Klik pendek Volume Turun dan Daya untuk mengambil tangkapan layar sebagian</string>
+    <string name="click_partial_screenshot_invert_title">Tangkapan layar sebagian dengan tekan lama</string>
+    <string name="click_partial_screenshot_invert_summary">Tekan lama Volume Turun dan Daya untuk mengambil tangkapan layar sebagian.</string>
     <!-- Volume Panel Plugin Values -->
     <!-- Volume rocker music control -->
     <string name="volume_rocker_music_controls_title">Kontrol pemutaran</string>
@@ -405,6 +425,7 @@
     <string name="vowifi_icon_emui">Ikon EMUI</string>
     <string name="vowifi_icon_asus">Ikon Asus</string>
     <string name="vowifi_icon_oneplus">Ikon OOS</string>
+    <string name="vowifi_icon_oos11">Ikon OOS 11</string>
     <string name="vowifi_icon_moto">Ikon Motorola</string>
     <string name="vowifi_icon_simple1">Ikon Simple1</string>
     <string name="vowifi_icon_simple2">Ikon Simple2</string>
@@ -417,7 +438,7 @@
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">Skala</string>
     <!-- Tiles animation style  -->
-    <string name="qs_tile_animation_title">Animasi</string>
+    <string name="qs_tile_animation_title">Animasi Ubin QS</string>
     <string name="qs_tile_animation_style_title">Gaya Animasi</string>
     <string name="qs_tile_animation_duration_title">Durasi animasi</string>
     <string name="qs_tile_animation_style_off">Tanpa animasi</string>
@@ -604,4 +625,12 @@
     <string name="ambient_doze_brightness_summary">Setel kecerahan untuk digunakan selama tampilan ambien menyala</string>
     <string name="lockscreen_qs_disabled_title">Nonaktifkan setelan cepat saat terkunci</string>
     <string name="lockscreen_qs_disabled_summary">Nonaktifkan perluasan setelan cepat pada layar kunci aman</string>
+    <!-- Incall vibrate options -->
+    <string name="haptic_category">Getaran</string>
+    <string name="incall_vibrate_connect_title">Getar saat terhubung</string>
+    <string name="incall_vibrate_call_wait_title">Getar saat menunggu panggilan</string>
+    <string name="incall_vibrate_disconnect_title">Getar saat terputus</string>
+    <!-- Lock icon -->
+    <string name="hide_lockicon_title">Sembunyikan ikon kunci</string>
+    <string name="hide_lockicon_summary">Sembunyikan ikon kunci pada layar kunci</string>
 </resources>
