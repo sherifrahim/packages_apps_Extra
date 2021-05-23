@@ -222,8 +222,6 @@
     <string name="status_bar_custom_header_shadow_summary">Para una mejor visibilidad en imágenes brillantes</string>
     <string name="status_bar_custom_header_shadow_title">Sombra de la imagen del encabezado</string>
     <string name="unit_percent">\u0025</string>
-    <string name="horizon_light_show_always_title">Show for all doze events</string>
-    <string name="horizon_light_show_always_summary">Show lights for all doze events and not just notifications</string>
     <!-- Volume Panel Plugin -->
     <string name="volume_panel">Estilo del panel de volumen</string>
     <string name="volume_panel_aosp">AOSP</string>
