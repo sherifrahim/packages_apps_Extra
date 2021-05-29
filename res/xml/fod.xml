@@ -14,16 +14,7 @@
      limitations under the License.
 -->
 
-        <!-- FOD Nightlight -->
-        <com.nezuko.extra.preferences.SystemSettingSwitchPreference
-            android:key="fod_night_light"
-            android:title="@string/fod_night_light_title"
-            android:summary="@string/fod_night_light_summary"
-            android:defaultValue="@*android:bool/disable_fod_night_light"  />
-
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/lockscreen_fod_category" >
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
         <com.nezuko.extra.preferences.SystemSettingSwitchPreference
             android:key="fod_icon_animation"
@@ -39,6 +30,13 @@
             android:entryValues="@array/fod_icon_animation_values"
             android:defaultValue="0"
             android:dependency="fod_icon_animation" />
+
+        <!-- FOD Nightlight -->
+        <com.nezuko.extra.preferences.SystemSettingSwitchPreference
+            android:key="fod_night_light"
+            android:title="@string/fod_night_light_title"
+            android:summary="@string/fod_night_light_summary"
+            android:defaultValue="@*android:bool/disable_fod_night_light"  />
   
         <!-- FOD pressed color -->
 	<com.nezuko.extra.preferences.SystemSettingListPreference
